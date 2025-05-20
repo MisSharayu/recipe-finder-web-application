@@ -33,7 +33,7 @@ const Home = () => {
     }, 3000); // change image every 4 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [sliderImages.length]);
 
   const [loading, setLoading] = useState(false);
   const enteredIngredients = input.toLowerCase().split(",").map(i => i.trim()).filter(i => i);
